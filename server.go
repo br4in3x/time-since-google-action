@@ -3,9 +3,9 @@ package main
 import (
 	"net/http"
 
-	"github.com/br4in3x/google-action-time-since/actions"
-	"github.com/br4in3x/google-action-time-since/internal/request"
-	"github.com/br4in3x/google-action-time-since/internal/response"
+	"github.com/br4in3x/time-since-google-action/actions"
+	"github.com/br4in3x/time-since-google-action/internal/request"
+	"github.com/br4in3x/time-since-google-action/internal/response"
 	"github.com/labstack/echo/v4"
 	"github.com/pkg/errors"
 )

@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/br4in3x/google-action-time-since/internal/request"
+	"github.com/br4in3x/time-since-google-action/internal/request"
 	"github.com/stretchr/testify/require"
 )
 

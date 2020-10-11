@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/br4in3x/google-action-time-since/internal/request"
-	"github.com/br4in3x/google-action-time-since/internal/response"
-	"github.com/br4in3x/google-action-time-since/internal/util"
+	"github.com/br4in3x/time-since-google-action/internal/request"
+	"github.com/br4in3x/time-since-google-action/internal/response"
+	"github.com/br4in3x/time-since-google-action/internal/util"
 )
 
 type DateFromToAction struct {

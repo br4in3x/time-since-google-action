@@ -2,18 +2,17 @@ package main
 
 import (
 	"fmt"
+	"os"
 
-	"github.com/br4in3x/google-action-time-since/actions"
-	"github.com/br4in3x/google-action-time-since/internal/util"
+	"github.com/br4in3x/time-since-google-action/actions"
+	"github.com/br4in3x/time-since-google-action/internal/util"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	"github.com/labstack/gommon/log"
 	"github.com/tidwall/pretty"
 )
 
 func main() {
 	e := echo.New()
-	e.Logger.SetLevel(log.INFO)
 
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
@@ -29,5 +28,7 @@ func main() {
 
 	e.POST("/webhook", srv.Webhook)
 
-	e.Logger.Fatal(e.Start("0.0.0.0:8080"))
+	port := os.Getenv("PORT")
+	addr := fmt.Sprintf("0.0.0.0:%s", port)
+	e.Logger.Fatal(e.Start(addr))
 }

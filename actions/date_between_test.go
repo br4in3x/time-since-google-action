@@ -3,8 +3,8 @@ package actions
 import (
 	"testing"
 
-	"github.com/br4in3x/google-action-time-since/internal/request"
-	"github.com/br4in3x/google-action-time-since/internal/response"
+	"github.com/br4in3x/time-since-google-action/internal/request"
+	"github.com/br4in3x/time-since-google-action/internal/response"
 	"github.com/stretchr/testify/require"
 )
 
