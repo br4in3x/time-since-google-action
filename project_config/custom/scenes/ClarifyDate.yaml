@@ -1,0 +1,15 @@
+intentEvents:
+- handler:
+    webhookHandler: DATE_FROM_TO
+  intent: DATE_FROM_TO
+- handler:
+    webhookHandler: DATE_BETWEEN
+  intent: DATE_BETWEEN
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: I didn't catch that. Can you repeat?
+            text: I didn't catch that. Can you repeat?

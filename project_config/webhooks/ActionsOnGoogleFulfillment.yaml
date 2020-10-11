@@ -1,6 +1,5 @@
 handlers:
   - name: DATE_BETWEEN
-  - name: DATE_WHEN
   - name: DATE_FROM_TO
 httpsEndpoint:
   baseUrl: https://time-since-google-action.herokuapp.com/webhook

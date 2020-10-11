@@ -5,9 +5,6 @@ intentEvents:
 - handler:
     webhookHandler: DATE_FROM_TO
   intent: DATE_FROM_TO
-- handler:
-    webhookHandler: DATE_WHEN
-  intent: DATE_WHEN
 onEnter:
   staticPrompt:
     candidates:
