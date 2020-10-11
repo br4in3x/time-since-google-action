@@ -42,7 +42,7 @@ func (a *DateFromToAction) Invoke(r request.Request) (*response.Simple, error) {
 
 	if timeFrom.After(timeNow) {
 		resDays = timeFrom.Sub(timeNow).Hours() / 24
-		tts = fmt.Sprintf("%d days until %s", int(resDays), r.Intent.Params.DateFrom.Original)
+		tts = fmt.Sprintf("It's %d days until %s.", int(resDays), r.Intent.Params.DateFrom.Original)
 	}
 
 	if timeFrom.Equal(timeNow) {

@@ -70,7 +70,7 @@ func Test_DateFrom_TimeAfterCurrentDate(t *testing.T) {
 
 	// assert
 	require.NoError(t, err)
-	require.Equal(t, "6 days until January 7th, 2020", res.Prompt.FirstSimple.Speech)
+	require.Equal(t, "It's 6 days until January 7th, 2020.", res.Prompt.FirstSimple.Speech)
 }
 
 func Test_DateFrom_ZeroDays(t *testing.T) {
