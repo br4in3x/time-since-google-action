@@ -36,8 +36,9 @@ func (a *DateBetweenAction) Invoke(r request.Request) (*response.Simple, error) 
 		return nil, errors.New("invalid to date input")
 	}
 
-	timeFrom := time.Date(yFrom, time.Month(mFrom), dFrom, 0, 0, 0, 0, time.Now().Location())
-	timeTo := time.Date(yTo, time.Month(mTo), dTo, 0, 0, 0, 0, time.Now().Location())
+	loc := a.TimeWrapper.Now().Location()
+	timeFrom := time.Date(yFrom, time.Month(mFrom), dFrom, 0, 0, 0, 0, loc)
+	timeTo := time.Date(yTo, time.Month(mTo), dTo, 0, 0, 0, 0, loc)
 
 	if timeFrom.Equal(timeTo) {
 		tts := "There is no difference. These are same dates."
