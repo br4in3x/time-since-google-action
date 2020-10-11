@@ -1,0 +1,10 @@
+parameters:
+- name: DateAmount
+  type:
+    name: actions.type.DateTime
+trainingPhrases:
+- what date will it be after ($DateAmount '1 year' auto=false)
+- time after ($DateAmount '3 months' auto=false)
+- ($DateAmount '300 days' auto=false) from now
+- When will it be ($DateAmount '5 months and 3 days' auto=false)?
+- When will it be ($DateAmount '293 days' auto=true)?

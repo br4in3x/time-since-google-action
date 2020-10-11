@@ -1,0 +1,15 @@
+parameters:
+- name: DateFrom
+  type:
+    name: actions.type.DateTime
+trainingPhrases:
+- how many days will it be at ($DateFrom 'october 1, 2020' auto=true)?
+- how much time would it be at ($DateFrom 'october 15, 2020' auto=true)?
+- time at ($DateFrom 'june 12, 2020' auto=true)
+- days at ($DateFrom 'july 1, 2021' auto=true)
+- time from ($DateFrom 'August 21, 1992' auto=true)
+- days since ($DateFrom 'May 12, 2018' auto=false)
+- how much time since ($DateFrom 'July 1' auto=false)?
+- how much time passed since ($DateFrom 'the first of June' auto=false)?
+- how many days have passed since ($DateFrom '13 of July 2020' auto=false)?
+- how many days have passed since ($DateFrom 'June 20, 1993' auto=false)?

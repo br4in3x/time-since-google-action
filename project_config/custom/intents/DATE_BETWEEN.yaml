@@ -1,0 +1,16 @@
+parameters:
+- name: DateFrom
+  type:
+    name: actions.type.DateTime
+- name: DateTo
+  type:
+    name: actions.type.DateTime
+trainingPhrases:
+- how much time between ($DateFrom 'July 18' auto=false) and ($DateTo 'June 15' auto=false)
+- the time between ($DateFrom '1 of October 2018' auto=false) and ($DateTo 'October
+  2, 2020' auto=false)
+- days between ($DateFrom 'July 1, 2020' auto=false), and ($DateTo '20 of June 2020'
+  auto=false)
+- how much time between ($DateFrom 'June 1' auto=false) and ($DateTo 'June 12' auto=false)
+- how many days between ($DateFrom 'October 12' auto=false) and ($DateTo 'June 20'
+  auto=false)
