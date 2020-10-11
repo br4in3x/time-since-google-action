@@ -1,7 +1,6 @@
 package actions
 
 import (
-	"errors"
 	"fmt"
 	"math"
 	"time"
@@ -25,7 +24,7 @@ func (a *DateBetweenAction) Invoke(r request.Request) (*response.Simple, error) 
 	yFrom := r.Intent.Params.DateFrom.Resolved.Year
 
 	if dFrom == 0 || mFrom == 0 || yFrom == 0 {
-		return nil, errors.New("invalid from date input")
+		return response.ClarifyDate(), nil
 	}
 
 	dTo := r.Intent.Params.DateTo.Resolved.Day
@@ -33,7 +32,7 @@ func (a *DateBetweenAction) Invoke(r request.Request) (*response.Simple, error) 
 	yTo := r.Intent.Params.DateTo.Resolved.Year
 
 	if dTo == 0 || mTo == 0 || yTo == 0 {
-		return nil, errors.New("invalid to date input")
+		return response.ClarifyDate(), nil
 	}
 
 	loc := a.TimeWrapper.Now().Location()

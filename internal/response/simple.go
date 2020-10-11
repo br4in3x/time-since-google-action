@@ -37,6 +37,17 @@ type Scene struct {
 	Next  Next   `json:"next"`
 }
 
+func ClarifyDate() *Simple {
+	return &Simple{
+		Scene: Scene{
+			Name: "Welcome",
+			Next: Next{
+				Name: "ClarifyDate",
+			},
+		},
+	}
+}
+
 func SimpleResponse(text string) *Simple {
 	return &Simple{
 		Session: Session{

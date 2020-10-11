@@ -27,8 +27,8 @@ func Test_DateBetween(t *testing.T) {
 			&timeMock{},
 			request.Request{},
 			output{
-				nil,
-				"invalid from date input",
+				response.ClarifyDate(),
+				"",
 			},
 		},
 		{
@@ -48,8 +48,8 @@ func Test_DateBetween(t *testing.T) {
 				},
 			},
 			output{
-				nil,
-				"invalid to date input",
+				response.ClarifyDate(),
+				"",
 			},
 		},
 		{

@@ -1,7 +1,6 @@
 package actions
 
 import (
-	"errors"
 	"fmt"
 	"time"
 
@@ -24,7 +23,7 @@ func (a *DateFromToAction) Invoke(r request.Request) (*response.Simple, error) {
 	year := r.Intent.Params.DateFrom.Resolved.Year
 
 	if day == 0 || month == 0 || year == 0 {
-		return nil, errors.New("invalid date input")
+		return response.ClarifyDate(), nil
 	}
 
 	now := a.TimeWrapper.Now()

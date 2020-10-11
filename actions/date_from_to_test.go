@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/br4in3x/time-since-google-action/internal/request"
+	"github.com/br4in3x/time-since-google-action/internal/response"
 	"github.com/stretchr/testify/require"
 )
 
@@ -17,9 +18,8 @@ func Test_DateFrom_DateNotParsed_ReturnsError(t *testing.T) {
 	res, err := act.Invoke(req)
 
 	// assert
-	require.Nil(t, res)
-	require.Error(t, err)
-	require.Equal(t, "invalid date input", err.Error())
+	require.NoError(t, err)
+	require.Equal(t, response.ClarifyDate(), res)
 }
 
 func Test_DateFrom_TimeBeforeCurrentDate(t *testing.T) {
