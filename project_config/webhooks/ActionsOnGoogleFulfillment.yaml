@@ -1,7 +1,7 @@
 handlers:
-- name: DATE_BETWEEN
-- name: DATE_WHEN
-- name: DATE_FROM_TO
+  - name: DATE_BETWEEN
+  - name: DATE_WHEN
+  - name: DATE_FROM_TO
 httpsEndpoint:
-  baseUrl: https://d68ead252f7d.ngrok.io/webhook
+  baseUrl: https://time-since-google-action.herokuapp.com/webhook
   endpointApiVersion: 2
