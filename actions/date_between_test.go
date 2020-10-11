@@ -106,7 +106,7 @@ func Test_DateBetween(t *testing.T) {
 				},
 			},
 			output{
-				response.SimpleResponse("It's 2 days between january 1, 2020 and january 13, 2020"),
+				response.SimpleResponse("It's 2 days."),
 				"",
 			},
 		},
