@@ -8,17 +8,17 @@ import (
 	"github.com/br4in3x/time-since-google-action/internal/util"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	"github.com/tidwall/pretty"
+	"github.com/labstack/gommon/log"
 )
 
 func main() {
 	e := echo.New()
+	e.Logger.SetLevel(log.DEBUG)
 
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 	e.Use(middleware.BodyDump(func(c echo.Context, reqBody, resBody []byte) {
-		payload := string(pretty.Color(reqBody, nil))
-		fmt.Printf("%s\n", payload)
+		e.Logger.Debug(string(reqBody))
 	}))
 
 	srv := Server{
